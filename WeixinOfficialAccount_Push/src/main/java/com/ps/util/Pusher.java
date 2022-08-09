@@ -17,7 +17,7 @@ public class Pusher {
 
     public static void push(String openId){
         //模版id
-        String templateId = "HzzkRlmcKa3LVs0hJ8qX6NmzJgcXdzaAJGvGC0Hv2kU";
+        String templateId = "ixtvgwZyj4oQXGOqtshQn1u9Caz1UbWlUqAFG5Nv9As";
 
         //1，配置
         WxMpInMemoryConfigStorage wxStorage = new WxMpInMemoryConfigStorage();
