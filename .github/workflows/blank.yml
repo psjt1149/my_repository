@@ -3,8 +3,8 @@ name: Junit
 # on用来控制何时运行这个workflow
 on:
   # 在push或者pull_request时触发这个事件workflow
-  push:
-    branches: [ main ]
+#   push:
+#     branches: [ main ]
   schedule:
     - cron: '0 1 * * *'
   # 允许你手动在Github网页上执行该workflow
