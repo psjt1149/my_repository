@@ -17,9 +17,34 @@ import java.util.Date;
 public class Weather {
 
     //日期
-    public static String getDate(){
-        SimpleDateFormat today = new SimpleDateFormat("yyyy年MM月dd日    EEEE");
-        String date = today.format(new Date());
+    public static String getDate() {
+        SimpleDateFormat today = new SimpleDateFormat("yyyy年MM月dd日    ");
+        SimpleDateFormat week = new SimpleDateFormat("EEEE");
+
+        String dateOfWeek = week.format(new Date());
+        String dateOfDate = today.format(new Date());
+
+        switch (dateOfWeek) {
+            case "Monday":
+                dateOfWeek = "星期一";
+            case "Tuesday":
+                dateOfWeek = "星期二";
+            case "Wednesday":
+                dateOfWeek = "星期三";
+            case "Thursday":
+                dateOfWeek = "星期四";
+            case "Friday":
+                dateOfWeek = "星期五";
+            case "Saturday":
+                dateOfWeek = "星期六";
+            case "Sunday":
+                dateOfWeek = "星期日";
+            default:
+                System.out.println("????");
+                break;
+        }
+
+        String date = dateOfDate + dateOfWeek;
         return date;
     }
 
