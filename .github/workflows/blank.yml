@@ -38,4 +38,4 @@ jobs:
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
           if: always()
-          path: "WaterTest.java"
+          path: "**/WaterTest.java"
