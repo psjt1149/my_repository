@@ -37,4 +37,5 @@ jobs:
       - uses: ashley-taylor/junit-report-annotations-action@master
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
-#         if: always()
+          if: always()
+          path: "WaterTest.java"
