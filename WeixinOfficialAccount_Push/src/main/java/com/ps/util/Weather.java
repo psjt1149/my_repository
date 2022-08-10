@@ -18,7 +18,7 @@ public class Weather {
 
     //日期
     public static String getDate(){
-        SimpleDateFormat today = new SimpleDateFormat("yyyy年MM月dd日    E");
+        SimpleDateFormat today = new SimpleDateFormat("yyyy年MM月dd日    EEEE");
         String date = today.format(new Date());
         return date;
     }
