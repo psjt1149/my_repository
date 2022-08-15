@@ -17,7 +17,7 @@ public class Pusher {
 
     public static void push(String openId){
         //模版id
-        String templateId = "ixtvgwZyj4oQXGOqtshQn1u9Caz1UbWlUqAFG5Nv9As";
+        String templateId = "3ChhZkiPT3CtCCvcgQ5x-zKHRxF_wFJw54NeQxVgeIs";
 
         //1，配置
         WxMpInMemoryConfigStorage wxStorage = new WxMpInMemoryConfigStorage();
@@ -42,6 +42,7 @@ public class Pusher {
         templateMessage.addData(new WxMpTemplateData("birthdayOfGirl",MemorableDay.getBirthdayOfGirl()+"","#FFA500"));
         templateMessage.addData(new WxMpTemplateData("birthdayOfBoy",MemorableDay.getBirthdayOfBoy()+"","#FFA500"));
         templateMessage.addData(new WxMpTemplateData("sentences",Sentences.getSentences()+"","#7CFC00"));
+        templateMessage.addData(new WxMpTemplateData("jokesText",Jokes.getJokesText()+""));
         String notes = "";
         if(MemorableDay.getBirthdayOfBoy() % 365 == 0){
             notes = "今天是鹏鹏的生日！";
