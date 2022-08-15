@@ -18,13 +18,13 @@ public class PushTest {
     @Test
     public void goodMorning() {
         Pusher.push("ozoSs6Ycmv0TAKeDTNbZQLhyzUvY");    //自己
-        //Pusher.push("ozoSs6ShO86kplNJMj0WswsbGHc8");
+        Pusher.push("ozoSs6ShO86kplNJMj0WswsbGHc8");
     }
 
     @Test
     public void pushWater() {
         Pusher.water("ozoSs6Ycmv0TAKeDTNbZQLhyzUvY");    //自己
-        //Pusher.water("ozoSs6ShO86kplNJMj0WswsbGHc8");
+        Pusher.water("ozoSs6ShO86kplNJMj0WswsbGHc8");
     }
 
 
