@@ -16,6 +16,19 @@ import java.util.Date;
 
 public class Weather {
 
+    /*
+    //日期
+    public static String getDate(){
+        SimpleDateFormat today = new SimpleDateFormat("yyyy年MM月dd日    EEEE");
+        String date = today.format(new Date());
+        return date;
+    }
+     */
+
+    //城市(用于拼接地址)
+    static String cityForURL = "chaozhou";
+
+
     //日期
     public static String getDate() {
         SimpleDateFormat today = new SimpleDateFormat("yyyy年MM月dd日    ");
@@ -50,7 +63,7 @@ public class Weather {
 
     //最高温度
     public static String getMaxWeather() {
-        String strURL = "http://flash.weather.com.cn/wmaps/xml/shenzhen.xml";
+        String strURL = "http://flash.weather.com.cn/wmaps/xml/"+cityForURL+".xml";
         String maxTem = null;
         try {
             URL url = new URL(strURL);
@@ -77,7 +90,7 @@ public class Weather {
 
     //最低温度
     public static String getMinWeather() {
-        String strURL = "http://flash.weather.com.cn/wmaps/xml/shenzhen.xml";
+        String strURL = "http://flash.weather.com.cn/wmaps/xml/"+cityForURL+".xml";
         String minTem = null;
         try {
             URL url = new URL(strURL);
@@ -104,7 +117,7 @@ public class Weather {
 
     //城市名
     public static String getCity() {
-        String strURL = "http://flash.weather.com.cn/wmaps/xml/shenzhen.xml";
+        String strURL = "http://flash.weather.com.cn/wmaps/xml/"+cityForURL+".xml";
         String cityName = null;
         try {
             URL url = new URL(strURL);
@@ -157,19 +170,11 @@ public class Weather {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
     public static void main(String[] args) throws IOException {
+        System.out.println("==========测试方法==========");
         System.out.println(getMaxWeather());
+        System.out.println("==========测试方法==========");
+
     }
 
 }
